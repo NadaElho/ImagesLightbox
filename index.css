@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+*{
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100vh;
+}
+.images .img {
+  margin: 0px;
+  overflow: hidden;
+}
+.images img {
+  height: 310px;
+  width: 306px;
+  max-width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  cursor: pointer;
+}
+
+.images .img:hover img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+@media (max-width: 695px) {
+  .images img {
+    height: 300px;
+    width: 600px;
+    max-width: 100%;
+  }
+}
+.showImages {
+  background-color: white;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  display: none;
+}
+@media (max-width: 768px) {
+  .showImages {
+    width: 100%;
+  }
+  .showImages .header h2 {
+    font-size: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .showImages {
+    min-width: 768px;
+    max-width: 950px;
+  }
+}
+.showImages .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.showImages .header h2 {
+  margin-left: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+}
+.showImages .header h2 span {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+.showImages .header i {
+  margin-right: 22px;
+  color: #71c2c2;
+  font-weight: bold;
+  cursor: pointer;
+}
+.showImages .arrows i {
+  font-size: 30px;
+  top: 55%;
+  color: white;
+  cursor: pointer;
+}
+.showImages .show img {
+  margin: 5px;
+  margin-top: 0px;
+  max-width: calc(100% - 10px);
+}
+.showImages .left {
+  position: absolute;
+  left: 10px;
+}
+.showImages .right {
+  position: absolute;
+  right: 10px;
+}
